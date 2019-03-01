@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href = "game.css" type = "text/css">
+<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
+<title>TicTacToe</title>	
+</head>
+<body>
+    <div class="header noselect">
+        <div id = "header">
+        <center>
+            <table>
+                <tr style="height:60px;">
+                    <td>
+                        <img src = "tic-tac-toe.png">
+                    </td>
+                    <td>
+                            <span class = "titlea">Tic Tac Toe</span>
+                    </td>
+                </tr>
+            </table>
+            
+        </center>
+        </div>
+    </div>
+    <div class="mainbody"  style="margin-top:30px;">
+        <div class="message" style="margin-top:10px;">
+            <center>
+                <span class="youturn hide" style="font-size: 20px;" >
+                    <u>Your</u> Turn
+                </span>
+                <span class="p1turn hide" style="font-size: 20px;">
+                    <u>Player 1</u> Turn
+                </span>
+                <span class="p2turn hide" style="font-size: 20px;">
+                    <u>Player 2</u> Turn
+                </span>
+                <span class="p1win hide" style="font-size: 25px;font-family: 'Roboto Mono', monospace;color:purple;" >
+                    PLAYER 1 WINS
+                </span>
+                <span class="p2win hide" style="font-size: 25px;font-family: 'Roboto Mono', monospace;color:purple;" >
+                    PLAYER 2 WINS
+                </span>
+                <span class="win hide" style="font-size: 25px;font-family: 'Roboto Mono', monospace;color:purple;" >
+                    BOT WINS
+                </span>
+                <span class="draw hide" style="font-size: 25px;font-family: 'Roboto Mono', monospace;color:purple;" >
+                    GAME DRAW
+                </span>
+            </center>
+        </div>
+        <div class="content">
+            <center>
+            <div class="opt">
+                <center>
+                    <br>
+                    <table style="margin-top : 10px;">
+                            <tr class="onebtn">
+                                    <td colspan="2" >    
+                                        <center>
+                                            <button id = "onebtn">
+                                                Play With Bot
+                                            </button>
+                                            </center>
+                                        </td>
+                                </tr>
+                            <tr class="oneopt hide">
+                                <td colspan="2">
+                                    <span style="font-family:cursive;" >Who Goes First?</span>
+                                </td>
+                            </tr>
+                            <tr class="oneopta hide">
+                            <td>
+                                <button id = "youbtn">
+                                    You
+                                </button>
+                            </td>
+                            <td>
+                                <button id = "botbtn">
+                                    Bot
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="twobtn" >
+                            <td colspan="2" >    
+                                <center>
+                                    <button id = "twobtn">
+                                        Two Player
+                                    </button>
+                                    </center>
+                                </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+            <div class="grids hide">
+                <div id = "grid">
+                    <div class="b1 b">
+
+                    </div>
+                    <div class="b2 b">
+
+                    </div>
+                    <div class="b3 b">
+
+                    </div>
+                    <div class="b4 b">
+
+                    </div>
+                    <div class="b5 b">
+
+                    </div>
+                    <div class="b6 b">
+
+                    </div>
+                    <div class="b7 b">
+
+                    </div>
+                    <div class="b8 b">
+
+                    </div>
+                    <div class="b9 b">
+
+                    </div>
+                </div>
+            </div>
+            </center>
+        </div>
+        <div class="rebtn hide">
+            <center>
+                <button id = "rebtn">Restart Game</button>
+            </center>
+        </div>
+    </div>
+</body>
+<script src="game.js"></script>
+</html>
