@@ -123,10 +123,10 @@ function pressbtn(a) {
         clicked[a-1] = (turn%2) + 1;
         if (turn%2 !== 0) {
             var cbtn = document.querySelector(convert.get(a));
-            cbtn.setAttribute('style','background-image:url(\'images/cross.jpg\')');
+            cbtn.setAttribute('style','background-image:url(\'cross.jpg\')');
         } else {
             var cbtn = document.querySelector(convert.get(a));
-            cbtn.setAttribute('style','background-image:url(\'images/zero.jpg\')');
+            cbtn.setAttribute('style','background-image:url(\'zero.jpg\')');
         }
         return 1;
 }
