@@ -63,7 +63,7 @@ document.querySelector('#botbtn').onclick = function() {
     clicked[4] = 2;
     currentm = document.querySelector('.youturn');
     currentm.classList.remove('hide');
-    document.querySelector('.b5').setAttribute('style','background-image:url(\'images/cross.jpg\')');
+    document.querySelector('.b5').setAttribute('style','background-image:url(\'cross.jpg\')');
     turn += 1;
     bfirst = 1;
 }
