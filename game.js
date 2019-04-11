@@ -530,3 +530,13 @@ function switchXO(i) {
         y.style.backgroundColor = "deepPink";
     }
 }
+
+if (document.images) {
+    img1 = new Image();
+    img2 = new Image();
+    img3 = new Image();
+
+    img1.src = "0.png";
+    img2.src = "1.png";
+    img3.src = "back.jpg";
+}
