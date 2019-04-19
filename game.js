@@ -1,3 +1,5 @@
+var a=0;
+var moves = 0;
 function startGame(){
 
   for(var i = 1; i<=9; i++){
@@ -6,10 +8,11 @@ function startGame(){
   document.turn="X";
   document.winner = null;
   document.draw = null;
+  a = 0;
+  moves = 0;
   setMessage(document.turn + " Gets to Start")
 }
-var a=0;
-var moves = 0;
+
 function setMessage(msg) {
   document.getElementById("message").innerText= msg;
 }
@@ -20,7 +23,7 @@ function nextMove(square){
     setMessage("Already Draw");
   } else if(square.innerText == ''){
    square.innerText = document.turn;
-   moves++;
+
    switchTurn();
  } else{
   setMessage("Pick Another Square")
@@ -32,13 +35,15 @@ function switchTurn() {
     document.winner = document.turn;
     a=1;
   }else if(document.turn == "X"){
+       moves++;
     document.turn = "O";
     setMessage("It's " + document.turn + "'s Turn" )
   } else{
+       moves++;
     document.turn = "X";
     setMessage("It's " + document.turn + "'s Turn" )
   }
-  if (moves == 9&&a===0) {
+  if (moves ==9&&a===0) {
     document.draw = 1;
     setMessage("Game Draw");
   }
