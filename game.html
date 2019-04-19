@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Tic Tac Toe</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+    @import url('https://fonts.googleapis.com/css?family=Candal');
+    body {
+      width: 350px;
+      margin: auto;
+      background-image: url("wall.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+    }
+    table {
+     border-collapse: collapse;
+     border: 3px solid black;
+     margin-top: 5px;
+     margin-bottom: 5px;
+    }
+    #message {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 20px;
+      color: #1A9BB2;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 1px #000000;
+      margin-left: 105px;
+    }
+    tr, th{
+      border: 3px solid grey;
+    }
+    h1 {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 40pt;
+      color: #C95F14;
+      width: 350px;
+      text-shadow: 2px 2px 4px #000000;
+      letter-spacing: 2px;
+    }
+    th:hover {
+    background-color: #E8EDF2;
+    }
+    #restart {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 20px;
+      color: #1A9BB2;
+      text-decoration: none;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 1px #000000;
+      margin-left: 120px;
+    }
+    .Square {
+      height: 120px;
+      width: 120px;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 50pt;
+      color: #1A930F;
+      text-align: center;
+      text-shadow: 2px 2px 4px #000000;
+    }
+  </style>
+ </head>
+ <body onload="startGame();">
+   <h1 style="text-align: center;">Tic Tac Toe</h1>
+   <div id="message">Messages Here</div>
+   <table border="1">
+     <tr>
+       <th class="Square" id="s1" onClick="nextMove(this)"></td>
+       <th class="Square" id="s2" onClick="nextMove(this)"></td>
+       <th class="Square" id="s3" onClick="nextMove(this)"></td>
+     </tr>
+     <tr>
+       <th class="Square" id="s4" onClick="nextMove(this)"></td>
+       <th class="Square" id="s5" onClick="nextMove(this)"></td>
+       <th class="Square" id="s6" onClick="nextMove(this)"></td>
+     </tr>
+     <tr>
+       <th class="Square" id="s7" onClick="nextMove(this)"></td>
+       <th class="Square" id="s8" onClick="nextMove(this)"></td>
+       <th class="Square" id="s9" onClick="nextMove(this)"></td>
+     </tr>
+   </table>
+   <a href="javascript: startGame();" id="restart">Start Over</a>
+   <script src="game.js"></script>
+ </body>
+</html>
