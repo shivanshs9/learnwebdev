@@ -227,6 +227,13 @@ function hardSecond() {
         if (flag === 1) {
             return 5;
         } else if (bot[0] === 5) {
+            if (player1[1] == 7 || player1[1] == 9 || player1[1] == 1 || player1[1] == 3) {
+                var m = magicToIndex(10 - player1[1]);
+                occupied[m] = 1;
+                var x = randomMidPosition();
+                occupied[m] = 0;
+                return x;
+            }
             return randomMidPosition();
         }
         return randomExtPosition();
@@ -301,7 +308,11 @@ function vsBotSecond() {
     var k;
     if (winCondition(player1)) {
         setTimeout(function () {
-            alert("Player Wins!!");
+            if (level === 3) {
+                alert("You're a CHAMPION!!");
+            } else {
+                alert("Player Wins!!");
+            }
             restartClicked();
         }, 1);
         return;
@@ -363,7 +374,11 @@ function playareaClicked(i) {
         } else if (human === 0) {
             if (winCondition(player1)) {
                 setTimeout(function () {
-                    alert("Player Wins!!");
+                    if (level === 3) {
+                        alert("You're a CHAMPION!!");
+                    } else {
+                        alert("Player Wins!!");
+                    }
                     restartClicked();
                 }, 1);
                 return;
