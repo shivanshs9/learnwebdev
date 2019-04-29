@@ -111,6 +111,9 @@ function randomExtPosition() {
             i = 4;
         }
     }
+    if (available.length===0){
+        return -1;
+    }
     item = available[Math.floor(Math.random() * available.length)];
     return item + 1;
 }
@@ -125,6 +128,7 @@ function randomMidPosition() {
             available.push(i);
         }
     }
+    
     item = available[Math.floor(Math.random() * available.length)];
     return item + 1;
 }
@@ -238,6 +242,10 @@ function hardSecond() {
         }
         return randomExtPosition();
     } else {
+        var x=randomExtPosition();
+        if (x!== -1){
+            return x;
+        }
         return randomPosition();
     }
 }
