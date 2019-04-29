@@ -11,6 +11,7 @@ var player1 = [];
 var player2 = [];
 var occupied = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var flag = 0;
+var flag1 = 0;
 
 // clears the play area
 function emptyAll() {
@@ -35,6 +36,7 @@ function restartClicked() {
     moves = 0;
     human = 1;
     flag = 0;
+	flag1 = 0;
     comp = 0;
     var x = document.getElementById("button-o"),
         y = document.getElementById("button-x");
@@ -232,12 +234,20 @@ function hardSecond() {
                 occupied[m] = 1;
                 var x = randomMidPosition();
                 occupied[m] = 0;
+				flag1 = 1;
                 return x;
+				
             }
             return randomMidPosition();
         }
         return randomExtPosition();
     } else {
+		if (flag1 === 1){
+				var x = magicToIndex(player1[0]);
+				if (occupied[8-x] == 0) {
+					return 8-x+1;
+			}
+		}
         return randomPosition();
     }
 }
